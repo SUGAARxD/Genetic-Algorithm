@@ -43,7 +43,7 @@ The genetic algorithm uses `PyTorch` to build and train the model.
 
 - **Crossover Step:** For each individual from the new population, a **random number** is generated between 0 and 1. If the number is **smaller** than the `crossover probability`, the individual will be selected for crossover. If there is an **odd number** of individuals selected, **the last one will be eliminated**.
   
-  For each **two individuals selected for crossover**, a **random integer** is choosen between `chromosome length / 6` and `chromosome length - (chromosome length / 3)` to ensure that at least **half of the first or third parameter is retained**.
+  For each **two individuals selected for crossover**, a **random integer** is choosen between `chromosome length / 6` and `chromosome length - (chromosome length / 6)` to ensure that at least **half of the first or third parameter is retained**.
 
   The genes of the individuals are **split in half**, and the **new offspring** will be as follows:
   - The ``first child`` will have the first half of the genes from the first parent and the second half from the second parent.
