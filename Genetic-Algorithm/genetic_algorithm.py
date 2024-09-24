@@ -68,7 +68,7 @@ class GeneticAlgorithm:
             parents.pop()
 
         for i in range(0, len(parents), 2):
-            crossover_point = random.randint(3, Chromosome.length - 3)
+            crossover_point = random.randint((Chromosome.length // 6), Chromosome.length - (Chromosome.length // 6))
 
             child1_genes = parents[i].genes[:crossover_point] + parents[i + 1].genes[crossover_point:]
             child2_genes = parents[i + 1].genes[:crossover_point] + parents[i].genes[crossover_point:]
